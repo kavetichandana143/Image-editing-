@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>ONLINE IMAGE EDITOR</h2>
+
+<div class="container">
+
+  <!-- LEFT SIDE -->
+  <div class="controls">
+    <h3>Filters</h3>
+
+    <div class="filter-buttons">
+      <button class="active" data-filter="brightness">Brightness</button>
+      <button data-filter="contrast">Contrast</button>
+      <button data-filter="blur">Blur</button>
+      <button data-filter="grayscale">Grayscale</button>
+      <button data-filter="saturate">Saturate</button>
+      <button data-filter="opacity">Opacity</button>
+    </div>
+
+    <div class="slider">
+      <span id="filter-name">Brightness</span>
+      <span id="filter-value">100%</span>
+      <input type="range" id="range" min="0" max="200" value="100">
+    </div>
+
+    <h3>Rotate</h3>
+    <div class="rotate-buttons">
+      <button onclick="rotateLeft()">⟲</button>
+      <button onclick="rotateRight()">⟳</button>
+      <button onclick="flipX()">⇋</button>
+      <button onclick="flipY()">⇅</button>
+    </div>
+
+    <button class="reset" onclick="resetImage()">Reset Image</button>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="preview">
+    <img id="image" src="">
+    
+    <div class="actions">
+      <input type="file" id="upload">
+      <button onclick="saveImage()">Save Image</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
